@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <div class="formulario">
+        <h2 class="formulario-header">Sign Up!</h2>
+        <form novalidate>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="García" required>
+            <br>
+            <label for="gender-male">Hombre</label>
+            <input type="radio" id="gender-male" name="gender">
+            <label for="gender-female">Mujer</label>
+            <input type="radio" id="gender-female" name="gender">
+            <label for="gender-other">Otro</label>
+            <input type="radio" id="gender-other" name="gender">
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            <br>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" placeholder="juangarcia@mail.com" required>
+            <br>
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="JuanGarcia23" required>
+            <br>
+            <label>Contraseña:</label>
+            <input type="password" id="pass" placeholder="Contraseña" required>
+            <input type="password" id="pass-repeat" name="password" placeholder="Repite la contraseña" required onchange="checkPassword()">
+            <br>
+            <input type="checkbox" id="tyc" required>
+            <label for="tyc">Acepto los términos y condiciones.</label>
+            <button class="submit-btn" type="submit" onclick="return checkPassword()">Sign Up!</button>
+        </form>
+        <div class="missing">
+            <ul id="missing">
+
+            </ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
