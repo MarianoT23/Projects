@@ -4,11 +4,16 @@
 
 body {
   background: #f0edfe;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fbfbfb), color-stop(50%, #f0edfe), to(#fbfbfb));
-  background: linear-gradient(0deg, #fbfbfb 0%, #f0edfe 50%, #fbfbfb 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#fbfbfb), color-stop(30%, #f0edfe), color-stop(70%, #f0edfe), to(#fbfbfb));
+  background: linear-gradient(0deg, #fbfbfb 0%, #f0edfe 30%, #f0edfe 70%, #fbfbfb 100%);
 }
 
 footer {
-  background: #6c63ff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#abb1d1), color-stop(70%, #abb1d1), to(white));
+  background: linear-gradient(0deg, #abb1d1 0%, #abb1d1 70%, white 100%);
+}
+
+.svg-footer-logo {
+  width: 2em;
 }
 /*# sourceMappingURL=main.css.map */

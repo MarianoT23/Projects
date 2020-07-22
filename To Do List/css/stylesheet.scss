@@ -57,6 +57,9 @@ header {
     width: 90%; height: 90%;
     padding: 1em;
 }
+input::placeholder {
+    color: inherit;
+}
 /* --- MIS LISTAS --- */ 
 .mis-listas-container {
     grid-area: mis-listas-container;
@@ -68,7 +71,7 @@ header {
         color: var(--color-texto2);
         h2 {
             color: var(--color-texto1);
-            margin-bottom: 0.8em;
+            margin-bottom: 1.5em;
         }
         .nombre-lista {
             color: var(--color-texto1);
@@ -87,10 +90,7 @@ header {
             color: inherit;
             border: 0; border-bottom: 1px solid currentColor; 
             width: 80%;
-            margin-top: 1em;
-        }
-        .nueva-lista::placeholder {
-            color: inherit;
+            margin-top: 3em;
         }
     }
 }
@@ -101,6 +101,7 @@ header {
     grid-area: lista-container;
     line-height: 1.5;
     font-size: 1.2rem;
+    padding: 1.5em;
     .lista-box {
         color: var(--color-texto2);
         position: relative;
@@ -109,7 +110,10 @@ header {
 .lista-header {
     display: flex; align-items: center; justify-content: space-between;
     color: var(--color-texto1);
-    margin-bottom: 0.8em;
+    margin-bottom: 3em;
+}
+.lista-creador-pendientes {
+    margin-top: 3.5em;
 }
 .nuevo-pendiente {
     background: transparent;
@@ -137,6 +141,10 @@ button {
     position: absolute;
     right: -0.5em;
     bottom: -0.5em;
+    .eliminar {
+        margin-left: 1.5em;
+        text-transform: uppercase;
+    }
 }
 
 

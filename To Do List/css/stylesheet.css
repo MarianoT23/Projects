@@ -77,6 +77,22 @@ header {
   padding: 1em;
 }
 
+input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+input:-ms-input-placeholder {
+  color: inherit;
+}
+
+input::-ms-input-placeholder {
+  color: inherit;
+}
+
+input::placeholder {
+  color: inherit;
+}
+
 /* --- MIS LISTAS --- */
 .mis-listas-container {
   -ms-grid-row: 2;
@@ -93,7 +109,7 @@ header {
 
 .mis-listas-container .mis-listas-box h2 {
   color: var(--color-texto1);
-  margin-bottom: 0.8em;
+  margin-bottom: 1.5em;
 }
 
 .mis-listas-container .mis-listas-box .nombre-lista {
@@ -117,23 +133,7 @@ header {
   border: 0;
   border-bottom: 1px solid currentColor;
   width: 80%;
-  margin-top: 1em;
-}
-
-.mis-listas-container .mis-listas-box .nueva-lista::-webkit-input-placeholder {
-  color: inherit;
-}
-
-.mis-listas-container .mis-listas-box .nueva-lista:-ms-input-placeholder {
-  color: inherit;
-}
-
-.mis-listas-container .mis-listas-box .nueva-lista::-ms-input-placeholder {
-  color: inherit;
-}
-
-.mis-listas-container .mis-listas-box .nueva-lista::placeholder {
-  color: inherit;
+  margin-top: 3em;
 }
 
 /* ---  LISTA --- */
@@ -143,6 +143,7 @@ header {
   grid-area: lista-container;
   line-height: 1.5;
   font-size: 1.2rem;
+  padding: 1.5em;
 }
 
 .lista-container .lista-box {
@@ -161,7 +162,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: var(--color-texto1);
-  margin-bottom: 0.8em;
+  margin-bottom: 3em;
+}
+
+.lista-creador-pendientes {
+  margin-top: 3.5em;
 }
 
 .nuevo-pendiente {
@@ -193,6 +198,11 @@ button {
   position: absolute;
   right: -0.5em;
   bottom: -0.5em;
+}
+
+.lista-footer .eliminar {
+  margin-left: 1.5em;
+  text-transform: uppercase;
 }
 
 /* CUSTOM CHECKBOX */

@@ -126,7 +126,7 @@ function renderPendientes (listaSeleccionada) {
 
 function renderConteoPendientes(listaSeleccionada) {
     const pendienteIncompletoCount = listaSeleccionada.pendiente.filter(pend => !pend.completo).length
-    const pendienteString = pendienteIncompletoCount === 1 ? "pendiente" : "pendientes"
+    const pendienteString = pendienteIncompletoCount === 1 ? "task remaining" : "tasks remaining" 
     listaIndCount.innerText = `${pendienteIncompletoCount} ${pendienteString}`
 }
 
