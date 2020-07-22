@@ -1,4 +1,14 @@
-.navbar, .card {
-  background: #DAD9E8;
+.navbar {
+  background: #F0EDFE;
+}
+
+body {
+  background: #f0edfe;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fbfbfb), color-stop(50%, #f0edfe), to(#fbfbfb));
+  background: linear-gradient(0deg, #fbfbfb 0%, #f0edfe 50%, #fbfbfb 100%);
+}
+
+footer {
+  background: #6c63ff;
 }
 /*# sourceMappingURL=main.css.map */

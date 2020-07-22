@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
     <title>To Do List</title>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -12,85 +13,78 @@
         <h1>To Do List</h1>
     </header>
     <!-- MIS LISTAS --> 
-    <div class="mis-listas">
-        <h2>Mis listas</h2>
-        <ul data-lists>
-            <!-- <li class="nombre-lista lista-activa">Trabajo</li>
-            <li class="nombre-lista">Personal</li>
-            <li class="nombre-lista">Supermercado</li> -->
-        </ul>
-        <form action="" data-nueva-lista-form>
-            <input 
-            type="text"
-            class="nueva-lista"
-            data-nueva-lista-input
-            placeholder="Nombre lista nueva"
-            aria-label="Nombre lista nueva"
-            >
-            <button class="lista-new" aria-label="Nombre lista nueva">
-                +
-            </button>
-        </form>
+    <div class="mis-listas-container">
+        <div class="mis-listas-box">
+            <h2>Mis listas</h2>
+            <ul data-lists>
+                <!-- JAVASCRIPT HERE -->
+            </ul>
+            <form action="" data-nueva-lista-form>
+                <input 
+                type="text"
+                class="nueva-lista"
+                data-nueva-lista-input
+                placeholder="Nombre lista nueva"
+                aria-label="Nombre lista nueva"
+                >
+                <button class="lista-new" aria-label="Nombre lista nueva">
+                    +
+                </button>
+            </form>
+        </div>
     </div>
     <!-- LISTA INDIVIDUALES --> 
-    <div class="lista">
-        <!-- HEADER --> 
-        <div class="lista-header">
-            <h2>Trabajo</h2>
-            <p>x pendientes</p>
-        </div>
-        <!-- BODY --> 
-        <div class="lista-body">
-            <!-- LISTADO PENDIENTES --> 
-            <div class="lista-pendientes">
-                <div class="pendiente">
-                    <input type="checkbox" id="pendiente-1">
-                    <label for="pendiente-1">
-                        <span class="custom-checkbox"></span>
-                        Presentar informe
-                    </label>
+    <div class="lista-container" data-lista-individual-container>
+        <div class="lista-box">
+            <!-- HEADER --> 
+            <div class="lista-header">
+                <h2 data-lista-individual-titulo></h2>
+                <p data-lista-individual-count></p>
+            </div>
+            <!-- BODY --> 
+            <div class="lista-body">
+                <!-- LISTADO PENDIENTES --> 
+                <div class="lista-pendientes" data-lista-individual-pendiente>
+                    <!-- JAVASCRIPT HERE -->
                 </div>
-                <div class="pendiente">
-                    <input type="checkbox" id="pendiente-2">
-                    <label for="pendiente-2">
-                        <span class="custom-checkbox"></span>
-                        Redactar mail
-                    </label>
-                </div>
-                <div class="pendiente">
-                    <input type="checkbox" id="pendiente-3">
-                    <label for="pendiente-3">
-                        <span class="custom-checkbox"></span>
-                        Prepar presentación
-                    </label>
+                <!-- CREADOR DE PENDIENTES --> 
+                <div class="lista-creador-pendientes">
+                    <form action="" data-nuevo-pendiente-form>
+                        <input 
+                        type="text"
+                        data-nuevo-pendiente-input
+                        class="nuevo-pendiente"
+                        placeholder="Pendiente nuevo"
+                        aria-label="Pendiente nuevo"
+                    >
+                        <button class="pendiente-new" aria-label="Pendiente nuevo">
+                            + 
+                        </button>
+                    </form>
                 </div>
             </div>
-            <!-- CREADOR DE PENDIENTES --> 
-            <div class="lista-creador-pendientes">
-                <form action="">
-                    <input 
-                    type="text"
-                    class="nuevo-pendiente"
-                    placeholder="Pendiente nuevo"
-                    aria-label="Pendiente nuevo"
-                   >
-                    <button class="pendiente-new" aria-label="Pendiente nuevo">
-                        + 
-                    </button>
-                </form>
+            <!-- FOOTER - BORRAR PENDIENTES --> 
+            <div class="lista-footer">
+                <button class="eliminar" data-btn-eliminar-pendiente>
+                    Eliminar tareas completadas
+                </button>
+                <button class="eliminar" data-btn-eliminar-lista>
+                    Eliminar lista
+                </button>
             </div>
-        </div>
-        <!-- FOOTER - BORRAR PENDIENTES --> 
-        <div class="lista-footer">
-            <button class="eliminar">
-                Eliminar pendiente
-            </button>
-            <button class="eliminar">
-                Eliminar lista
-            </button>
         </div>
     </div>
-    <script src="js/script.js"></script>
+
+
+    <template id="pendiente-template">
+        <div class="pendiente">
+            <input type="checkbox">
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+    
 </body>
 
 </html>

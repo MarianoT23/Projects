@@ -1,0 +1,210 @@
+/* --- CSS & SASS   VARIABLES --- */
+:root {
+    --color-texto1: #fa7d09;
+    --color-texto2: #ff4301;
+    --color-background-tarjetas: #2f2519;
+    --color-background-body: #4a3f35;
+}
+$bradius-default: 15px;
+
+/* --- FONTS --- */
+/* ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* --- RESETS ---  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* --- GRID LAYOUT --- */
+body {
+    background: var(--color-background-body);
+    color: var(--color-texto);
+
+    display: grid;
+    grid-template-columns: 0.2fr 1.5fr 3fr 0.2fr;
+    grid-template-rows: auto;
+    grid-template-areas:    "header header               header           header"
+                            "...... mis-listas-container lista-container  ...... ";
+    gap: 1em;
+}
+
+
+/* --- HEADER --- */ 
+header {
+    grid-area: header;
+    background: var(--color-background-tarjetas);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    padding: 1em; margin: 0.5em;
+    color: var(--color-texto2);
+    border-radius: $bradius-default;
+}
+
+/* MIS LISTAS + LISTAS */
+.mis-listas-container, .lista-container {
+    background: var(--color-background-tarjetas);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: $bradius-default;
+    padding: 0.5em;
+}
+.mis-listas-box, .lista-box {
+    width: 90%; height: 90%;
+    padding: 1em;
+}
+/* --- MIS LISTAS --- */ 
+.mis-listas-container {
+    grid-area: mis-listas-container;
+
+    line-height: 1.8;
+    font-size: 1.2rem;
+    list-style: circle;
+    .mis-listas-box {
+        color: var(--color-texto2);
+        h2 {
+            color: var(--color-texto1);
+            margin-bottom: 0.8em;
+        }
+        .nombre-lista {
+            color: var(--color-texto1);
+            cursor: pointer;
+        }
+        .nombre-lista:hover {
+            opacity: 0.7;
+        }
+        .lista-activa {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .nueva-lista {
+            background: transparent;
+            font-size: inherit;
+            color: inherit;
+            border: 0; border-bottom: 1px solid currentColor; 
+            width: 80%;
+            margin-top: 1em;
+        }
+        .nueva-lista::placeholder {
+            color: inherit;
+        }
+    }
+}
+
+
+/* ---  LISTA --- */ 
+.lista-container {
+    grid-area: lista-container;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    .lista-box {
+        color: var(--color-texto2);
+        position: relative;
+    }
+}
+.lista-header {
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--color-texto1);
+    margin-bottom: 0.8em;
+}
+.nuevo-pendiente {
+    background: transparent;
+    font-size: inherit;
+    color: inherit;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+
+}
+button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: inherit;
+}
+.lista-new, .pendiente-new {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-left: 0.2em;
+}
+.lista-new:hover, .pendiente-new:hover {
+    opacity: 0.7;
+}
+.lista-footer {
+    position: absolute;
+    right: -0.5em;
+    bottom: -0.5em;
+}
+
+
+/* CUSTOM CHECKBOX */
+/* CHECKBOX */
+[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+.custom-checkbox {
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    margin-right: 0.7em;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+.pendiente:hover .custom-checkbox {
+    transform: scale(1.2);
+    color: var(--color-background-body);
+}
+[type="checkbox"]:focus + label .custom-checkbox {
+    transform: scale(1.2);
+    color: var(--color-background-body);
+}
+.pendiente label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1em;
+}
+.pendiente {
+    position: relative;
+    margin-bottom: 1em;
+}
+.pendiente::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -0.5em;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.4;
+}
+[type="checkbox"]:checked + label .custom-checkbox {
+    background: var(--color-background-body);
+}
+
+
+/* CROSSOUT */
+[type="checkbox"]:checked + label {
+    opacity: 0.7;
+}
+.pendiente label::after {
+    content: '';
+    position: absolute;
+    left: 1.5em;
+    right: 0;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 100ms ease-in-out;
+    transform-origin: right;
+}
+[type="checkbox"]:checked + label::after {
+    transform: scaleX(1);    
+    transform-origin: left;
+}
