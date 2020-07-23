@@ -1,19 +1,57 @@
 .navbar {
-  background: #F0EDFE;
+  background: #f6dbf7;
 }
 
 body {
   background: #f0edfe;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fbfbfb), color-stop(30%, #f0edfe), color-stop(70%, #f0edfe), to(#fbfbfb));
-  background: linear-gradient(0deg, #fbfbfb 0%, #f0edfe 30%, #f0edfe 70%, #fbfbfb 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #f6dbf7), to(white));
+  background: linear-gradient(0deg, white 0%, #f6dbf7 50%, white 100%);
 }
 
 footer {
-  background: -webkit-gradient(linear, left bottom, left top, from(#abb1d1), color-stop(70%, #abb1d1), to(white));
-  background: linear-gradient(0deg, #abb1d1 0%, #abb1d1 70%, white 100%);
+  background: #f6dbf7;
+}
+
+.svg-footer-container {
+  width: 4em;
 }
 
 .svg-footer-logo {
   width: 2em;
+}
+
+/* BIKE ANIMATIONS */
+#rueda-derecha, #rueda-izquierda {
+  -webkit-animation: ruedas 3s linear infinite;
+          animation: ruedas 3s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes ruedas {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes ruedas {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+.carousel-indicators li {
+  background-color: black;
 }
 /*# sourceMappingURL=main.css.map */

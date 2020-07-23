@@ -1,13 +1,35 @@
 .navbar {
-    background: #F0EDFE;
+    background: rgba(246, 219, 247, 1);
 }
 body {
     background: rgb(240,237,254);
-    background: linear-gradient(0deg, rgba(251,251,251,1) 0%, rgba(240,237,254,1) 30%, rgba(240,237,254,1) 70%, rgba(251,251,251,1) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246, 219, 247, 1) 50%, rgba(255,255,255,1) 100%);
 }
 footer {
-    background: linear-gradient(0deg, rgba(171, 177, 209, 1) 0%, rgba(171, 177, 209, 1) 70%, rgba(255,255,255,1) 100%);
+    background: rgba(246, 219, 247, 1);
+}
+.svg-footer-container {
+    width: 4em;
 }
 .svg-footer-logo {
     width: 2em;
+}
+/* BIKE ANIMATIONS */
+#rueda-derecha, #rueda-izquierda {
+    animation: ruedas 3s linear infinite;
+    transform: {
+        origin: center;
+        box: fill-box;
+    }
+}
+@keyframes ruedas {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+.carousel-indicators li {
+    background-color: black;
 }
