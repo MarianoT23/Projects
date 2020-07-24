@@ -1,19 +1,19 @@
-.navbar {
-    background: rgba(246, 219, 247, 1);
+@import "../bootstrap/scss/bootstrap.scss";
+
+/* BODY */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     background: rgb(240,237,254);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246, 219, 247, 1) 50%, rgba(255,255,255,1) 100%);
 }
-footer {
+/* NAVBAR */
+.navbar {
     background: rgba(246, 219, 247, 1);
 }
-.svg-footer-container {
-    width: 4em;
-}
-.svg-footer-logo {
-    width: 2em;
-}
+/* PRINCIPAL */
 /* BIKE ANIMATIONS */
 #rueda-derecha, #rueda-izquierda {
     animation: ruedas 3s linear infinite;
@@ -32,4 +32,14 @@ footer {
 }
 .carousel-indicators li {
     background-color: black;
+}
+/* FOOTER */
+footer {
+    background: rgba(246, 219, 247, 1);
+}
+.svg-footer-container {
+    width: 4em;
+}
+.svg-footer-logo {
+    width: 2em;
 }

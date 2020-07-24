@@ -28,7 +28,7 @@ body {
       grid-template-columns: 0.2fr 1.5fr 3fr 0.2fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "header header               header           header" "...... mis-listas-container lista-container  ...... ";
+      grid-template-areas: "header header               header           header" "...... mis-listas-container lista-container  ...... ";
   gap: 1em;
 }
 
