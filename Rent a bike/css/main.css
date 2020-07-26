@@ -10845,6 +10845,10 @@ body {
   padding: 5em 0;
 }
 
+.pricing-container .pricing form button:hover {
+  cursor: pointer;
+}
+
 .about-container {
   background: -webkit-gradient(linear, left top, left bottom, from(#f6dbf7), color-stop(80%, #f6dbf7), to(#faf0fb));
   background: linear-gradient(180deg, #f6dbf7 0%, #f6dbf7 80%, #faf0fb 100%);
@@ -10857,6 +10861,8 @@ body {
 /* CONTACT */
 iframe {
   border-radius: 15px;
+  width: 70%;
+  height: 100%;
 }
 
 .contact-info {
@@ -10867,6 +10873,19 @@ iframe {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.contact-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-info div p {
+  margin-bottom: 0;
 }
 
 .contact-info .contact-icon {

@@ -40,6 +40,11 @@ body {
     background: linear-gradient(0deg,rgba(246, 219, 247, 1) 0%, rgba(246, 219, 247, 1) 80%, rgba(250,240,251,1) 100%);
     .pricing {
         padding: 5em 0;
+        form {
+            button:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 .about-container {
@@ -51,9 +56,16 @@ body {
 /* CONTACT */
 iframe {
     border-radius: 15px;
+    width: 70%; height: 100%;
 }
 .contact-info {
     display: flex; flex-direction: column;
+    div {
+        display: flex; align-items: center;
+        p {
+            margin-bottom: 0;
+        }
+    }
     .contact-icon {
         width: 1.5em; height: 1.5em;
     }
