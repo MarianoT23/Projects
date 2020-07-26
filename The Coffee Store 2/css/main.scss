@@ -1,0 +1,172 @@
+/* CSS VARIABLES */
+:root {
+    --clr-letras: rgb(233, 233, 233);
+    --clr-fondo-negro: black;
+    --clr-fondo-bordo: rgb(53, 3, 3);
+}
+/* RESETS */
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: var(--clr-letras);
+}
+
+/* FONTS */
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Special Elite */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* GRID LAYOUT */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 80vh;
+    grid-template-areas:    "s1"
+                            "s2";
+}
+
+/* SECTION 1 */
+.s1 {
+    grid-area: s1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#background {
+    background-image: url("../images/b.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    opacity: 1;
+    z-index: -5;
+}
+#background2 {
+    background-color: black;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    opacity: 0;
+    z-index: -5;
+}
+.principal {
+    grid-area: principal;
+    display: flex; justify-content: center; align-items: center;
+    #title {
+        font-size: 80px;
+        color: white;
+        text-shadow: 0 0 5px white;
+    }
+}
+
+/* SECTION 2 */
+.s2 {
+    grid-area: s2;
+    background: var(--clr-fondo-bordo);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 5vh;
+    grid-template-areas:    "principal2"
+                            "footer";
+}
+.principal2 {
+    grid-area: principal2;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "about contact";
+    overflow: hidden;
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+        justify-content: center;
+    }
+    .about, .contact {
+        margin: 1em; padding: 1em;
+    }
+    .about {
+        grid-area: about;
+        width: 100%; height: 100%;
+        .cita {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        blockquote {
+            font-family: 'Special Elite', cursive;
+            width: 75%;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            position: relative;
+            margin-top: 3em;
+            padding: 0.5rem;
+        }
+        blockquote:before,
+        blockquote:after {
+            position: absolute;
+            font-size: 5rem;
+            width: 4rem; height: 4rem;
+        }
+        blockquote:before {
+            content: '“';
+            left: -4rem;
+            top: -2rem;
+        }
+
+        blockquote:after {
+            content: '”';
+            right: -4rem;
+            bottom: 0;
+        }
+        cite {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.6rem;
+            line-height: 3;
+            text-align: right;
+        }
+    }
+    .contact {
+        grid-area: contact;
+        width: 100%; height: 100%;
+        margin-left: 20%;
+        h4 {
+            display: inline;
+        }
+        .contact-icon {
+            width: 2em; height: 2em;
+            margin: 1em;
+        }
+        .contact-map {
+            margin-top: 1em;
+            width:40%; height: 40%;
+            iframe {
+                border-radius: 10px;
+                width: 100%; height: 100%;
+            }
+        }
+    }
+}
+footer {
+    grid-area: footer;
+    background: var(--clr-fondo-negro);
+    display: flex; justify-content: space-around;
+    .svg-footer-social {
+        display: flex; align-items: center; 
+        font-weight: 600;
+        position: relative;
+        a {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+        }
+        .svg-footer-logo {
+            width: 4vh; height: 4vh;
+            margin: 0 1em;
+        }
+    }
+    .svg-footer-social:hover {
+        cursor: pointer;
+    }
+}
