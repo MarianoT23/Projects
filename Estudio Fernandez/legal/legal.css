@@ -1,0 +1,134 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 10vh auto 5vh;
+      grid-template-rows: 10vh auto 5vh;
+      grid-template-areas: "header" "principal" "footer";
+}
+
+/* HEADER */
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background: white;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header .desktop-nav {
+  height: 8vh;
+  width: 100%;
+  background: #270188;
+}
+
+header .desktop-nav .logo {
+  width: 40%;
+}
+
+header .desktop-nav .d-menu {
+  width: 60%;
+}
+
+/* PRINCIPAL */
+.principal {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: principal;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "about                    about               about" "accidentes-estadios      accidentes-estadios foto-accidentes-estadio" "foto-accidentes-transito accidentes-transito accidentes-transito" "sucesiones               sucesiones          foto-sucesiones" "foto-despidos            despidos            despidos" "contacto                 contacto             contacto";
+}
+
+.principal .about {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: about;
+}
+
+.principal .accidentes-estadios {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: accidentes-estadios;
+}
+
+.principal .foto-accidentes-estadio {
+  grid-area: foto-accidentes-estadios;
+}
+
+.principal .accidentes-transito {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: accidentes-transito;
+}
+
+.principal .foto-accidentes-transito {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: foto-accidentes-transito;
+}
+
+.principal .sucesiones {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sucesiones;
+}
+
+.principal .foto-sucesiones {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: foto-sucesiones;
+}
+
+.principal .despidos {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: despidos;
+}
+
+.principal .foto-despidos {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: foto-despidos;
+}
+
+.principal .contacto {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contacto;
+}
+
+/* FOOTER */
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background: #270188;
+  color: white;
+}
+/*# sourceMappingURL=legal.css.map */

@@ -1,0 +1,107 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 95vh 5vh;
+    grid-template-areas: "legal traduccion"
+                         "social social";
+    position: relative;
+    background: white;
+    color: white;
+}
+/**/
+.background {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: black;
+    z-index: -10;
+}
+.logo {
+    position: absolute;
+    top: 1em; left: 1em;
+    width: 3em; height: 3em;
+}
+.language {
+    position: absolute;
+    top: 1em; right: 1em;
+    width: 2em; height: 2em;
+    img {
+        width: 100%; height: 100%;
+    }
+}
+/* LEGAL - TRADUCCION */
+.legal, .traduccion {
+    display: flex; justify-content: center; align-items: center; 
+    position: relative;
+    h2 {
+        font-size: 2.5em;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+        text-shadow: 0 0 3px white;
+    }
+    /*form {
+        input {
+            color: white;
+            background: rgb(58, 58, 58);
+            border: none; border-radius: 10px;
+            padding: 1em;
+            width: 100%;
+        }
+        input:hover {
+            cursor: pointer;
+        }
+    }*/
+    a {
+        position: absolute;
+        width: 100%; height: 100%;
+    }
+    a:hover ~ img {
+        opacity: 0.5;
+        transition: 1s;
+    }
+    img {
+        position: absolute;
+        z-index: -5;
+        width: 100%; height: 100%;
+        opacity: 0.2;
+    }
+}
+
+.legal-box, .traducciones-box {
+    display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+}
+
+.legal {
+    grid-area: legal;
+    border-right: 1px solid rgb(253, 241, 241);
+}
+.traduccion {
+    grid-area: traduccion;
+
+}
+/* SOCIAL */
+.social {
+    grid-area: social;
+    display: flex; align-items: center; justify-content: space-between;
+    p {
+        font-size: 0.8em;
+        margin-left: 1.5rem;
+    }
+    div {
+        margin-right: 1.5rem;
+        .social-logo {
+            width: 4vh; height: 4vh;
+            margin: 0 0.5em;
+        }
+    }
+}

@@ -10787,14 +10787,16 @@ button.close {
 }
 
 body {
-  background: #f0edfe;
-  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #f6dbf7), to(white));
-  background: linear-gradient(0deg, white 0%, #f6dbf7 50%, white 100%);
+  background: #faf0fb;
 }
 
 /* NAVBAR */
 .navbar {
   background: #f6dbf7;
+}
+
+.navbar .navbar-brand {
+  cursor: default;
 }
 
 /* PRINCIPAL */
@@ -10833,9 +10835,50 @@ body {
   background-color: black;
 }
 
+/* PRICING */
+.pricing-container {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6dbf7), color-stop(80%, #f6dbf7), to(#faf0fb));
+  background: linear-gradient(0deg, #f6dbf7 0%, #f6dbf7 80%, #faf0fb 100%);
+}
+
+.pricing-container .pricing {
+  padding: 5em 0;
+}
+
+.about-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6dbf7), color-stop(80%, #f6dbf7), to(#faf0fb));
+  background: linear-gradient(180deg, #f6dbf7 0%, #f6dbf7 80%, #faf0fb 100%);
+}
+
+.about-container .about {
+  padding: 5em 0;
+}
+
+/* CONTACT */
+iframe {
+  border-radius: 15px;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-info .contact-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 /* FOOTER */
 footer {
   background: #f6dbf7;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f6dbf7), color-stop(80%, #f6dbf7), to(#faf0fb));
+  background: linear-gradient(0deg, #f6dbf7 0%, #f6dbf7 80%, #faf0fb 100%);
 }
 
 .svg-footer-container {

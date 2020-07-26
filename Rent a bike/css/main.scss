@@ -6,12 +6,14 @@
     scroll-behavior: smooth;
 }
 body {
-    background: rgb(240,237,254);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246, 219, 247, 1) 50%, rgba(255,255,255,1) 100%);
+    background: rgba(250,240,251,1);
 }
 /* NAVBAR */
 .navbar {
     background: rgba(246, 219, 247, 1);
+    .navbar-brand {
+        cursor: default;
+    }
 }
 /* PRINCIPAL */
 /* BIKE ANIMATIONS */
@@ -33,9 +35,33 @@ body {
 .carousel-indicators li {
     background-color: black;
 }
+/* PRICING */
+.pricing-container {
+    background: linear-gradient(0deg,rgba(246, 219, 247, 1) 0%, rgba(246, 219, 247, 1) 80%, rgba(250,240,251,1) 100%);
+    .pricing {
+        padding: 5em 0;
+    }
+}
+.about-container {
+    background: linear-gradient(180deg,rgba(246, 219, 247, 1) 0%, rgba(246, 219, 247, 1) 80%, rgba(250,240,251,1) 100%);
+    .about {
+        padding: 5em 0;
+    }
+}
+/* CONTACT */
+iframe {
+    border-radius: 15px;
+}
+.contact-info {
+    display: flex; flex-direction: column;
+    .contact-icon {
+        width: 1.5em; height: 1.5em;
+    }
+}
 /* FOOTER */
 footer {
     background: rgba(246, 219, 247, 1);
+    background: linear-gradient(0deg, rgba(246,219,247,1) 0%, rgba(246, 219, 247, 1) 80%, rgba(250,240,251,1) 100%);
 }
 .svg-footer-container {
     width: 4em;

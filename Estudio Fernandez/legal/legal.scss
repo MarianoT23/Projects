@@ -1,0 +1,80 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh auto 5vh;
+    grid-template-areas:    "header"
+                            "principal"
+                            "footer";
+}
+/* HEADER */
+header {
+    grid-area: header;
+    background: white;
+    color: white;
+    display: flex; align-items: flex-end;
+    .desktop-nav{
+        height: 8vh; width: 100%;
+        background: #270188;
+        .logo {
+            width: 40%;
+        }
+        .d-menu {
+            width: 60%;
+        }
+    }
+}
+/* PRINCIPAL */
+.principal {
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:    "about                    about               about"
+                            "accidentes-estadios      accidentes-estadios foto-accidentes-estadio"
+                            "foto-accidentes-transito accidentes-transito accidentes-transito"
+                            "sucesiones               sucesiones          foto-sucesiones"
+                            "foto-despidos            despidos            despidos"
+                            "contacto                 contacto             contacto";
+    .about {
+        grid-area: about;
+    }
+    .accidentes-estadios {
+        grid-area: accidentes-estadios;
+    }
+    .foto-accidentes-estadio {
+        grid-area: foto-accidentes-estadios;
+    }
+    .accidentes-transito {
+        grid-area: accidentes-transito;
+    }
+    .foto-accidentes-transito {
+        grid-area: foto-accidentes-transito;
+    }
+    .sucesiones {
+        grid-area: sucesiones;
+    }
+    .foto-sucesiones {
+        grid-area: foto-sucesiones;
+    }
+    .despidos {
+        grid-area: despidos;
+    }
+    .foto-despidos {
+        grid-area: foto-despidos;
+    }
+    .contacto {
+        grid-area: contacto;
+    }
+}
+/* FOOTER */
+footer {
+    grid-area: footer;
+    background: #270188;
+    color: white;
+}
