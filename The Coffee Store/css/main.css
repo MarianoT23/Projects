@@ -85,8 +85,7 @@ body {
 
 .principal #title {
   font-size: 80px;
-  color: white;
-  text-shadow: 0 0 5px white;
+  text-shadow: 0 0 5px var(--clr-letras);
 }
 
 /* SECTION 2 */
@@ -206,11 +205,21 @@ body {
   margin-left: 20%;
 }
 
-.principal2 .contact h4 {
+.principal2 .contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.principal2 .contact .contact-info h4 {
   display: inline;
 }
 
-.principal2 .contact .contact-icon {
+.principal2 .contact .contact-info .contact-icon {
   width: 2em;
   height: 2em;
   margin: 1em;
@@ -228,6 +237,7 @@ body {
   height: 100%;
 }
 
+/* FOOTER */
 footer {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -267,5 +277,145 @@ footer .svg-footer-social .svg-footer-logo {
 
 footer .svg-footer-social:hover {
   cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  /* SECTION 1 */
+  .principal #title {
+    font-size: 60px;
+  }
+  /* SECTION 2 */
+  .principal2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: principal2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "about" "contact";
+  }
+  .principal2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8em;
+  }
+  .principal2 p {
+    font-size: 1rem;
+    line-height: 1.2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .principal2 .about {
+    margin: 1em 1em 0 1em;
+    padding: 1em 1em 0 1em;
+  }
+  .principal2 .about blockquote {
+    font-family: 'Special Elite', cursive;
+    width: 75%;
+    font-size: 1rem;
+    line-height: 1.4;
+    position: relative;
+    margin-top: 3em;
+    padding: 0.5rem;
+  }
+  .principal2 .about blockquote:before,
+  .principal2 .about blockquote:after {
+    position: absolute;
+    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .principal2 .about blockquote:before {
+    content: '“';
+    left: -2rem;
+    top: -1rem;
+  }
+  .principal2 .about blockquote:after {
+    content: '”';
+    right: -2rem;
+    bottom: -1rem;
+  }
+  .principal2 .about cite {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: right;
+  }
+  .principal2 .contact {
+    margin: 1em;
+    padding: 1em;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact;
+    width: 100%;
+  }
+  .principal2 .contact div > h3 {
+    display: none;
+  }
+  .principal2 .contact .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .principal2 .contact .contact-info #adress, .principal2 .contact .contact-info #phone-number {
+    width: 50%;
+  }
+  .principal2 .contact .contact-info h4 {
+    display: inline;
+    font-size: 1rem;
+  }
+  .principal2 .contact .contact-info .contact-icon {
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+  }
+  .principal2 .contact .contact-map {
+    display: none;
+  }
+  /* FOOTER */
+  footer {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    background: var(--clr-fondo-negro);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .svg-footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 600;
+    position: relative;
+  }
+  footer .svg-footer-social a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  footer .svg-footer-social .svg-footer-logo {
+    width: 4vh;
+    height: 4vh;
+    margin: 0 1em;
+  }
+  footer .svg-footer-social:hover {
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=main.css.map */
