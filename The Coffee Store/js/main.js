@@ -9,4 +9,6 @@ function parallax () {
     var rate = (1 / viewPortHeight) * scrolled
     backgroundBlack.style.opacity = rate
     title.style.transform = "translateY(" + scrolled / 2 + "px)"
+    console.log(scrolled/2)
+    console.log(viewPortHeight)
 }

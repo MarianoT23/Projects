@@ -313,37 +313,8 @@ footer .svg-footer-social:hover {
     margin: 1em 1em 0 1em;
     padding: 1em 1em 0 1em;
   }
-  .principal2 .about blockquote {
-    font-family: 'Special Elite', cursive;
-    width: 75%;
-    font-size: 1rem;
-    line-height: 1.4;
-    position: relative;
-    margin-top: 3em;
-    padding: 0.5rem;
-  }
-  .principal2 .about blockquote:before,
-  .principal2 .about blockquote:after {
-    position: absolute;
-    font-size: 3rem;
-    width: 3rem;
-    height: 3rem;
-  }
-  .principal2 .about blockquote:before {
-    content: '“';
-    left: -2rem;
-    top: -1rem;
-  }
-  .principal2 .about blockquote:after {
-    content: '”';
-    right: -2rem;
-    bottom: -1rem;
-  }
-  .principal2 .about cite {
-    font-family: 'Special Elite', cursive;
-    font-size: 1.2rem;
-    line-height: 2;
-    text-align: right;
+  .principal2 .about .cita {
+    display: none;
   }
   .principal2 .contact {
     margin: 1em;
@@ -407,9 +378,12 @@ footer .svg-footer-social:hover {
     left: 0;
   }
   footer .svg-footer-social .svg-footer-logo {
-    width: 4vh;
-    height: 4vh;
-    margin: 0 1em;
+    width: 3.5vh;
+    height: 3.5vh;
+    margin: 0 0.5em;
+  }
+  footer .svg-footer-social p {
+    font-size: 0.8rem;
   }
   footer .svg-footer-social:hover {
     cursor: pointer;

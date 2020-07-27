@@ -202,37 +202,8 @@ footer {
         }
         .about {
             margin: 1em 1em 0 1em; padding: 1em 1em 0 1em;
-            blockquote {
-                font-family: 'Special Elite', cursive;
-                width: 75%;
-                font-size: 1rem;
-                line-height: 1.4;
-                position: relative;
-                margin-top: 3em;
-                padding: 0.5rem;
-            }
-            blockquote:before,
-            blockquote:after {
-                position: absolute;
-                font-size: 3rem;
-                width: 3rem; height: 3rem;
-            }
-            blockquote:before {
-                content: '“';
-                left: -2rem;
-                top: -1rem;
-            }
-
-            blockquote:after {
-                content: '”';
-                right: -2rem;
-                bottom: -1rem;
-            }
-            cite {
-                font-family: 'Special Elite', cursive;
-                font-size: 1.2rem;
-                line-height: 2;
-                text-align: right;
+            .cita {
+                display: none;
             }
         }
         .contact {
@@ -274,8 +245,11 @@ footer {
                 top: 0; right: 0; bottom: 0; left: 0;
             }
             .svg-footer-logo {
-                width: 4vh; height: 4vh;
-                margin: 0 1em;
+                width: 3.5vh; height: 3.5vh;
+                margin: 0 0.5em;
+            }
+            p {
+                font-size: 0.8rem;
             }
         }
         .svg-footer-social:hover {
