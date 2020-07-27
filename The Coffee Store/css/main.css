@@ -348,9 +348,6 @@ footer .svg-footer-social:hover {
   .principal2 .contact {
     margin: 1em;
     padding: 1em;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: contact;
     width: 100%;
   }
   .principal2 .contact div > h3 {
