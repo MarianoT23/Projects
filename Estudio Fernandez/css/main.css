@@ -1,4 +1,4 @@
-/* GENERAL */
+/* --- 1. GENERAL  &  RESETS  &  CSS VARIABLE --- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
@@ -8,20 +8,27 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/*Roboto*/
+:root {
+  --clr-back-principal: rgb(27, 27, 27);
+  --clr-back-secundario: rgb(10, 9, 9);
+  --clr-letras-principal: white;
+}
+
+/* --- 2. GRID LAYOUT --- */
 body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 95vh 5vh;
-      grid-template-rows: 95vh 5vh;
-      grid-template-areas: "legal traduccion" "social social";
+  -ms-grid-rows: 100vh minmax(95vh, auto) 5vh;
+      grid-template-rows: 100vh minmax(95vh, auto) 5vh;
+      grid-template-areas: "legal  traduccion" "sobre  sobre" "social social";
   position: relative;
-  background: white;
-  color: white;
+  color: var(--clr-letras-principal);
 }
 
-/**/
+/* --- 3. BACKGORUND --- */
 .background {
   position: absolute;
   top: 0;
@@ -38,6 +45,7 @@ body {
   left: 1em;
   width: 3em;
   height: 3em;
+  z-index: 50;
 }
 
 .language {
@@ -46,6 +54,7 @@ body {
   right: 1em;
   width: 2em;
   height: 2em;
+  z-index: 50;
 }
 
 .language img {
@@ -53,7 +62,7 @@ body {
   height: 100%;
 }
 
-/* LEGAL - TRADUCCION */
+/* --- 4. LEGAL - TRADUCCION --- */
 .legal, .traduccion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,18 +74,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  /*form {
-        input {
-            color: white;
-            background: rgb(58, 58, 58);
-            border: none; border-radius: 10px;
-            padding: 1em;
-            width: 100%;
-        }
-        input:hover {
-            cursor: pointer;
-        }
-    }*/
+  border-bottom: 1px solid var(--clr-letras-principal);
 }
 
 .legal h2, .traduccion h2 {
@@ -84,7 +82,7 @@ body {
   width: 100%;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 0 0 3px white;
+  text-shadow: 0 0 3px var(--clr-letras-principal);
 }
 
 .legal a, .traduccion a {
@@ -94,7 +92,7 @@ body {
 }
 
 .legal a:hover ~ img, .traduccion a:hover ~ img {
-  opacity: 0.5;
+  opacity: 0.8;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -104,7 +102,7 @@ body {
   z-index: -5;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .legal-box, .traducciones-box {
@@ -121,48 +119,140 @@ body {
       flex-wrap: wrap;
 }
 
+/* LEGAL */
 .legal {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: legal;
-  border-right: 1px solid #fdf1f1;
+  border-right: 1px solid var(--clr-letras-principal);
 }
 
+/* TRADUCCIONES */
 .traduccion {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: traduccion;
 }
 
-/* SOCIAL */
-.social {
+/* --- 5. SOBRE --- */
+.sobre {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: social;
+  grid-area: sobre;
+  background: var(--clr-back-principal);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.sobre .principal-foto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+}
+
+.sobre .principal-foto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: 90%;
+  border-radius: 8px;
+}
+
+.sobre .principal-sobre {
+  width: 60%;
+  padding: 5%;
+  text-align: justify;
+}
+
+.sobre .principal-sobre h2 {
+  padding: 1em 0;
+}
+
+.sobre .principal-sobre p {
+  padding: 0.5em 0;
+}
+
+.sobre .principal-sobre .contact-sobre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sobre .principal-sobre .contact-sobre div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 50%;
+  min-width: 400px;
+  margin: 0.8em 0;
+}
+
+.sobre .principal-sobre .contact-sobre div .contact-sobre-icon {
+  width: 3em;
+  margin-right: 1em;
+}
+
+/* --- 6. SOCIAL --- */
+.social {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: social;
+  background: var(--clr-back-secundario);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .social p {
   font-size: 0.8em;
-  margin-left: 1.5rem;
 }
 
 .social div {
-  margin-right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social div .social-logo {
+  margin: 0 1em;
+  position: relative;
+}
+
+.social div .social-logo a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.social div .social-logo img {
   width: 4vh;
   height: 4vh;
-  margin: 0 0.5em;
 }
 /*# sourceMappingURL=main.css.map */
